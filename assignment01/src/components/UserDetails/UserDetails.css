@@ -1,0 +1,55 @@
+.profile-card {
+  width: 16rem;
+  height: 200px;
+  display: flex;
+  background: rgb(251, 252, 255);
+  padding: 1rem 2rem 1rem 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 16rem;
+  text-align: left;
+}
+.profile-card:hover {
+  border: 2px solid rgb(134, 158, 244);
+}
+
+.profile-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 15px;
+}
+
+.profile-info h2 {
+  margin: 1rem 0 0 0;
+  font-size: 20px;
+  font-family: "poppins", ui-sans-serif;
+  font-weight: 600;
+}
+
+.location {
+  color: #666;
+  font-size: 14px;
+  margin: 5px 0 1rem 0;
+  font-family: "Merriweather", sans-serif;
+  font-weight: 600;
+}
+
+.tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin: 1rem 0 2rem 0;
+}
+
+.tag {
+  background-color: #e0e7ff;
+  color: rgb(134, 158, 244);
+  padding: 5px 10px;
+  border-radius: 15px;
+  border: 1px solid rgb(134, 158, 244);
+  font-size: 12px;
+  font-family: "Merriweather", sans-serif;
+  font-weight: 600;
+}
