@@ -1,12 +1,12 @@
-import "./Header.css";
+import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import Tabs from "../Tabs/Tabs";
 import TabButton from "../TabButton/TabButton";
-import { useState } from "react";
 import Heading from "../Heading/Heading";
 import Input from "../Input/Input";
 import Div from "../Div/Div";
+import "./Header.css";
 export default function Header({onSearch}) {
 
   const [selectedTopic, setSelectedTopic] = useState("newUsers");

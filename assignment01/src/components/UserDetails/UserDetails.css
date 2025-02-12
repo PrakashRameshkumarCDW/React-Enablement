@@ -5,20 +5,25 @@
   background: rgb(251, 252, 255);
   padding: 1rem 2rem 1rem 1rem;
   border-radius: 1rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   max-width: 16rem;
   text-align: left;
+  border: 2px solid transparent;
 }
 .profile-card:hover {
   border: 2px solid rgb(134, 158, 244);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
-
-.profile-image {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  object-fit: cover;
+.profile-image-container {
+  width: 95px;
+  height: 95px;
   margin-right: 15px;
+  min-width: 95px;
+}
+.profile-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%; 
+   object-fit: cover; 
 }
 
 .profile-info h2 {

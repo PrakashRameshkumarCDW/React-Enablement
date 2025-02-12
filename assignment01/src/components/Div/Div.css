@@ -29,6 +29,7 @@
   display: flex;
   gap: 0.5rem;
   list-style: none;
+  align-items: center;
 }
 
 .navigations menu button {
@@ -41,21 +42,25 @@
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   font-weight: normal;
+  color: rgb(70, 75, 91);
 }
 
 .navigations menu button:hover {
   background-color: rgb(134, 158, 244);
-  color: #ebe7ef;
+  color: white;
+  padding: 1.2rem 1rem;
 }
 
 .navigations menu button.active {
   background-color: rgb(134, 158, 244);
-  color: #ebe7ef;
+  color: white;
+  padding: 1.2rem 1rem;
 }
 
 .content {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 1rem;
+  gap: 35px; 
+  justify-content: flex-start; 
+  align-items: flex-start; 
 }

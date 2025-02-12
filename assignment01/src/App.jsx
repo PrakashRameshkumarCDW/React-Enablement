@@ -1,11 +1,11 @@
-import { HEROS } from "./data";
 import { useState } from "react";
-import "./App.css";
+import { HEROS } from "./data";
 import Header from "./components/Header/Header";
 import UserDetails from "./components/UserDetails/UserDetails";
 import Div from "./components/Div/Div";
+import "./App.css";
 
-function App() {
+const App = () => {
   const [searchQuery, setSearchQuery] = useState("");
 
   const handleSearch = (event) => {
