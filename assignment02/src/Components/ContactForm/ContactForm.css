@@ -1,0 +1,27 @@
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(247, 247, 247);
+}
+
+.contact-form {
+  background-color: rgb(247, 247, 247);
+  padding: 20px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.form-title {
+  font-weight: 400;
+  color: rgb(112, 34, 83);
+  margin-bottom: 5px;
+  font-size: 30px;
+}
+
+.form-subtitle {
+  font-size: 14px;
+  color: rgb(112, 34, 83);
+  font-weight: lighter;
+  margin-bottom: 20px;
+}

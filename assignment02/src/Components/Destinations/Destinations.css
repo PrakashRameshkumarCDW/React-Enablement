@@ -1,0 +1,16 @@
+.destination-container{
+    padding:40px 45px;
+}
+.destination-title {
+  font-weight: 400;
+  color: rgb(112, 34, 83);
+  margin-bottom: 5px;
+  font-size: 30px;
+}
+
+.destination-subtitle {
+  font-size: 14px;
+  color: rgb(112, 34, 83);
+  font-weight: lighter;
+  margin-bottom: 20px;
+}
