@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import "./FormInput.css";
 import { useState } from 'react';
 
@@ -52,12 +51,5 @@ const FormInput = ({ labelName, name, inputType, className,options=[],onChange, 
     );
 
 }
-// FormInput.propTypes = {
-//     labelName: PropTypes.string,
-//     name: PropTypes.string.isRequired,
-//     inputType: PropTypes.string.isRequired,
-//     className: PropTypes.string.isRequired,
-//     options: PropTypes.arrayOf(PropTypes.string),
-//     onChange:PropTypes.func,
-// }
+
 export default FormInput;

@@ -1,4 +1,3 @@
-import PropTypes from "prop-types";
 import CardContainer from "../CardContainer/CardContainer";
 import './Destinations.css';
 
@@ -28,17 +27,6 @@ const Destinations = ({ data, city }: { data: {
     );
 
 
-}
-Destinations.propTypes = {
-    data: PropTypes.arrayOf(
-        PropTypes.shape({
-            place: PropTypes.string.isRequired,
-            city: PropTypes.string.isRequired,
-            shortDescription: PropTypes.string.isRequired,
-            fullDescription: PropTypes.string.isRequired,
-            relatedPlaces: PropTypes.arrayOf(PropTypes.string).isRequired,
-            image: PropTypes.string,
-        })).isRequired,
 }
 
 export default Destinations;

@@ -1,4 +1,3 @@
-import PropTypes from "prop-types";
 import Card from "../Card/Card";
 import './CardContainer.css';
 
@@ -21,18 +20,5 @@ const CardContainer = ({ posts }: { posts: {
 
     );
 }
-CardContainer.propTypes = {
-    posts: PropTypes.arrayOf(
-        PropTypes.shape({
-            place: PropTypes.string.isRequired,
-            city: PropTypes.string.isRequired,
-            shortDescription: PropTypes.string.isRequired,
-            fullDescription: PropTypes.string.isRequired,
-            relatedPlaces: PropTypes.arrayOf(PropTypes.string).isRequired,
-            image: PropTypes.string,
-        })).isRequired,
-}
-
-
 
 export default CardContainer;

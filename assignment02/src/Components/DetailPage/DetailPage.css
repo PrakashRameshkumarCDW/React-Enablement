@@ -7,7 +7,7 @@
 
 .text-section {
   width: 30%;
-  padding: 0 0 0 20px;
+  padding: 0 0 0 130px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -28,13 +28,13 @@
 }
 .place-text {
   font-size: 45px;
-  color: white;
+  color: #FFFFFF;
   font-weight: 100;
   padding-bottom: 10px;
 }
 
 .image-section {
-  width: 70%;
+  width: 60%;
   height: 30rem;
 }
 .image-section img {
@@ -43,15 +43,15 @@
   object-fit: fill;
 }
 .temperature {
-  font-size: 20px;
+  font-size: 30px;
   font-weight: 300;
-  padding-top: 100px; 
+  padding-top: 100px;
   position: absolute;
-  top: 37%;
+  top: 38%;
 }
-.fullDescription{
-    font-weight: 300;
-    padding: 40px 45px 0px 45px;
-    line-height: 1.5;
-    letter-spacing: 1px;
+.fullDescription {
+  font-weight: 300;
+  padding: 40px 110px 0px 110px;
+  line-height: 1.5;
+  letter-spacing: 1px;
 }

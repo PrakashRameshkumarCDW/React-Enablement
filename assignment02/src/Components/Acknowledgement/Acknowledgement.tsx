@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import './Acknowledgement.css';
 
 const Acknowledgement = ({ name, from, to }: {
@@ -23,12 +22,5 @@ const Acknowledgement = ({ name, from, to }: {
 
 
 }
-Acknowledgement.propTypes = {
-    name: PropTypes.string.isRequired,
-    from: PropTypes.string.isRequired,
-    to: PropTypes.string.isRequired,
-
-}
-
 
 export default Acknowledgement;

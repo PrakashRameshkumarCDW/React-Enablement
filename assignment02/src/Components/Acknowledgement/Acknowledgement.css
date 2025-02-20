@@ -7,7 +7,7 @@
 }
 .message-box {
   background-color: rgb(112, 34, 83);
-  color: white;
+  color: #FFFFFF;
   padding: 20px;
   text-align: center;
   max-width: 600px;
@@ -15,12 +15,12 @@
 
 .message-box p {
   font-size: 16px;
-  color:white;
+  color:#FFFFFF;
   font-weight: lighter;
   text-align: left;
 }
 
 .info {
   font-weight: bold;
-  color: white;
+  color: #FFFFFF;
 }

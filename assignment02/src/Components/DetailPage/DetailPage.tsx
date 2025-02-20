@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { fetchUrl } from "../../Service/apiService";
 import "./DetailPage.css";
-import PropTypes from "prop-types";
 import Destinations from "../Destinations/Destinations";
+import API_CONSTANTS from "../../Constants/appConstants.ts";
 const DetailPage = ({ city }: { city?: string }) => {
     const [allPosts, setAllPosts] = useState<
         {
@@ -26,7 +26,7 @@ const DetailPage = ({ city }: { city?: string }) => {
     useEffect(() => {
         const getPost = async () => {
             const data = await fetchUrl(
-                `https://nijin-server.vercel.app/api/explorer/places/${city}`
+                API_CONSTANTS.API_SPECIFIC_PLACE(city)
             );
             setPost({
                 ...data,
@@ -39,7 +39,7 @@ const DetailPage = ({ city }: { city?: string }) => {
     useEffect(() => {
         const getAllPosts = async () => {
             const data = await fetchUrl(
-                "https://nijin-server.vercel.app/api/explorer"
+                API_CONSTANTS.API_ALL_PLACES
             );
             setAllPosts(data);
         };
@@ -75,7 +75,4 @@ const DetailPage = ({ city }: { city?: string }) => {
     );
 };
 
-DetailPage.PropTypes = {
-    city: PropTypes.string.isRequired,
-};
 export default DetailPage;

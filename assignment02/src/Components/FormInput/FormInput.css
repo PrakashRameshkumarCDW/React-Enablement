@@ -26,13 +26,13 @@
 }
 
 select.form-select:invalid, select.overlay-select:invalid {
-  color: gray;
+  color: #808080;
 }
 
 .overlay-select {
   position: absolute;
   top: 45%;
-  left: 21%;
+  left: 27%;
   transform: translate(-50%, -50%);
   width: 35%;
   padding: 12px;

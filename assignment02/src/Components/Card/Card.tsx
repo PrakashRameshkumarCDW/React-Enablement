@@ -1,7 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import './Card.css';
 import Button from '../Button/Button';
-import PropTypes from 'prop-types';
 const Card = ({ image, place, city, shortDescription }: {
     image: string;
     place: string;
@@ -31,10 +30,5 @@ const Card = ({ image, place, city, shortDescription }: {
     );
 
 }
-Card.propTypes = {
-    place: PropTypes.string.isRequired,
-    city: PropTypes.string.isRequired,
-    shortDescription: PropTypes.string.isRequired,
-    image: PropTypes.string.isRequired,
-}
+
 export default Card;
