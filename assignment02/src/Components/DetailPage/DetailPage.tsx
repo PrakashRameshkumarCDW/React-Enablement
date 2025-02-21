@@ -3,7 +3,9 @@ import { fetchUrl } from "../../Service/apiService";
 import "./DetailPage.css";
 import Destinations from "../Destinations/Destinations";
 import API_CONSTANTS from "../../Constants/appConstants.ts";
+import { useNavigate } from "react-router-dom";
 const DetailPage = ({ city }: { city?: string }) => {
+    const navigate =  useNavigate(); 
     const [allPosts, setAllPosts] = useState<
         {
             place: string;
@@ -28,6 +30,9 @@ const DetailPage = ({ city }: { city?: string }) => {
             const data = await fetchUrl(
                 API_CONSTANTS.API_SPECIFIC_PLACE(city)
             );
+            if(!data){
+                navigate("/");
+            }
             setPost({
                 ...data,
                 image: `/src/assets/${data.city}.png`,
