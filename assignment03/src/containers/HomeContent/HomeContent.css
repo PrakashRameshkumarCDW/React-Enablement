@@ -1,0 +1,29 @@
+.content {
+  padding: 9rem 11rem 2rem;
+}
+.content h1 {
+  font-weight: 500;
+  font-size: xxx-large;
+}
+.content h3 {
+  font-weight: 300;
+  font-size: 2rem;
+  padding: 20px 0;
+}
+.card-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  width:100%;
+}
+
+.loader {
+  width: 200px;
+  height: 200px;
+}

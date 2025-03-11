@@ -1,0 +1,28 @@
+.category-content-other {
+  display: flex;
+  overflow: hidden;
+  height: 100vh;
+}
+.loader-container{
+  padding: 9rem 3rem 3rem;
+}
+
+.product-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: 45px;
+  padding: 9rem 3rem 3rem;
+}
+.product-card-container-other {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: 45px;
+  width: 70%;
+  padding: 0rem 3rem 0;
+  height: 85vh;
+  overflow: scroll;
+  margin-top: auto;
+  padding-bottom: 1rem;
+}

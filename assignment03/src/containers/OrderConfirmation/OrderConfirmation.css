@@ -1,0 +1,18 @@
+.order-confirmation-container{
+    padding: 11rem 0 0 11rem;
+    background-color: rgb(247, 247, 247);
+}
+.order-confirmation-title{
+    font-size: 25px;
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+.order-confirmation-subtle{
+    font-size: 18px;
+    font-weight: 300;
+    padding-bottom: 20px;
+}
+.order-confirmed-products{
+    display: flex;
+    flex-wrap: wrap;
+}

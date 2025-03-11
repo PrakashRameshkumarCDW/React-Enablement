@@ -1,0 +1,25 @@
+.shop-now,
+.add-to-cart {
+  width: 35%;
+  padding: 10px;
+  background-color: #000000;
+  color: white;
+  font-size: 15px;
+  border: none;
+  border-radius: 0 0 5px 0;
+  cursor: pointer;
+}
+.cart-container-btn {
+  background-color: #000000;
+  color: white;
+  font-size: 12px;
+  border: none;
+  border-radius: 0 0 5px 0;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 28%;
+  padding: 10px;
+  position: absolute;
+  right: 15px;
+  top: 80px;
+}

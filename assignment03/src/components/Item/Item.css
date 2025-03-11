@@ -1,0 +1,23 @@
+.counter{
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 27%;
+    padding: 5px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #ffff;
+    border-radius: 5px;
+    position: absolute;
+    right: 15px;
+    top: 90px;
+}
+.increase{
+    width: 20%;
+    text-align: right;
+    cursor: pointer;
+}
+.decrease{
+    width: 20%;
+    text-align: left;
+    cursor: pointer;
+}

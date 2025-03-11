@@ -1,0 +1,124 @@
+.cart-container {
+  background-color: rgb(247, 247, 247);
+  width: 30%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.buttons-container {
+  display: flex;
+  margin-bottom: 30px;
+}
+.my-cart,
+.my-wishlist {
+  padding: 30px 35px;
+  font-weight: 500;
+}
+
+.cart-card {
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px 20px 20px 0;
+  width: 350px;
+  height: 60px;
+  position: relative;
+  margin-bottom:30px;
+}
+
+.cart-image {
+  width: 140px;
+  height: 95px;
+  margin-right: 15px;
+  position: absolute;
+  top: 10px;
+  left: -32px;
+}
+.cart-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.cart-info {
+  width: 65%;
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.cart-title {
+  font-size: 16px;
+  font-weight: 300;
+  margin: 0;
+}
+
+.cart-price {
+  font-size: 14px;
+  color: #444;
+  margin: 5px 0;
+}
+
+/* .add-to-cart {
+  background: black;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s;
+} */
+
+.add-to-cart:hover {
+  background: #333;
+}
+
+.my-cart,
+.my-wishlist {
+  cursor: pointer;
+  padding: 10px 0px;
+  margin: 0 20px;
+  font-weight: bold;
+  color: rgb(153, 153, 153);
+}
+
+.my-cart.active,
+.my-wishlist.active {
+  border-bottom: 2px solid #000000;
+  color: #000000;
+}
+
+.cart-products-section,
+.wishlist-products-section {
+  padding-left: 3rem;
+  height: 69vh;
+  overflow-y: scroll;
+  align-items: center;
+}
+.wishlist-products-section {
+  height: 77vh;
+}
+.cart-content {
+  padding: 7.5rem 0 0rem 3rem;
+}
+.total-price-section {
+  background-color: #ffff;
+  padding: 2rem 2rem 2rem 3rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: space-between;
+}
+.total-amount-heading {
+  font-weight: 300;
+  font-size: 16px;
+}
+.total-amount-value {
+  font-weight: 500;
+  font-size: 27px;
+}
