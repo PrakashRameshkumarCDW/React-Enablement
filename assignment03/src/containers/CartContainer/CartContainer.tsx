@@ -5,32 +5,29 @@ import "./CartContainer.css";
 import { useNavigate } from "react-router-dom";
 import { updateCart } from "../../services/maintainCart";
 import { updateWishlist } from "../../services/maintainWishlist";
+import { CART_CONSTANTS } from "../../constants/APP_CONSTANTS";
 
-const CartContainer = ({ cartProducts, wishlistProducts,setCartProducts,setWishlists,selectedOption }: { 
-    cartProducts: {
-        id: number;
-        name: string;
-        photo: string;
-        guarantee: number;
-        rating: number;
-        price: string;
-        description: string;
-        quantity:number;
-    }[];
-    wishlistProducts: {
-        id: number;
-        name: string;
-        photo: string;
-        guarantee: number;
-        rating: number;
-        price: string;
-        description: string;
-        quantity:number;
-    }[];
-    setCartProducts?: any;
-    setWishlists?:any;
-    selectedOption:string;
-}) => {
+interface Product {
+    id: number;
+    name: string;
+    photo: string;
+    description: string;
+    price: string;
+    guarantee: number;
+    rating: number;
+    quantity: number;
+}
+
+interface CartContainerProps {
+    cartProducts: Product[];
+    wishlistProducts: Product[];
+    setCartProducts?: (products: Product[]) => void;
+    setWishlists?: (products: Product[]) => void;
+    selectedOption: string;
+}
+
+
+const CartContainer = ({ cartProducts, wishlistProducts,setCartProducts,setWishlists,selectedOption }: CartContainerProps) => {
     const navigate = useNavigate();
     const [selectedTab, setSelectedTab] = useState<string>(selectedOption);
 
@@ -45,21 +42,21 @@ const CartContainer = ({ cartProducts, wishlistProducts,setCartProducts,setWishl
             }
             return item;
         }).filter((item) => item.quantity > 0); 
-        setCartProducts([...newUpdatedCart]);
+        setCartProducts?.([...newUpdatedCart]);
         updateCart([...newUpdatedCart]);
     };
 
     const handleUpdateWishlist = (id:number) =>{
 
         const newUpdatedWishlist = wishlistProducts.filter((item) => item.id !== id);
-        setWishlists([...newUpdatedWishlist]);
+        setWishlists?.([...newUpdatedWishlist]);
         updateWishlist([...newUpdatedWishlist]);
         
         const removedFromWishlist = wishlistProducts.filter((item) => item.id === id);
         const isAlreadyInCart = cartProducts.some((item) => item.id === removedFromWishlist[0].id);
         if(!isAlreadyInCart){
             const newUpdatedArrBasedOnWishlist = [...cartProducts,removedFromWishlist[0]];
-            setCartProducts(newUpdatedArrBasedOnWishlist);
+            setCartProducts?.(newUpdatedArrBasedOnWishlist);
             updateCart([...newUpdatedArrBasedOnWishlist]);
         }
     }
@@ -75,13 +72,13 @@ const CartContainer = ({ cartProducts, wishlistProducts,setCartProducts,setWishl
                     className={`my-cart ${selectedTab === "cart" ? "active" : ""}`} 
                     onClick={() => handleTabChange("cart")}
                 >
-                    MY CART
+                    {CART_CONSTANTS.MY_CART}
                 </div>
                 <div 
                     className={`my-wishlist ${selectedTab === "wishlist" ? "active" : ""}`} 
                     onClick={() => handleTabChange("wishlist")}
                 >
-                    MY WISHLIST
+                   {CART_CONSTANTS.MY_WISHLIST}
                 </div>
             </div>
 
@@ -92,7 +89,7 @@ const CartContainer = ({ cartProducts, wishlistProducts,setCartProducts,setWishl
                     {cartProducts.length > 0 ? (
                         cartProducts.map((product) => <Item key={product.id} product={product} selectedTab={selectedTab}  onUpdateCart={handleUpdateCart} onUpdateWishlist={()=>{}}/>)
                     ) : (
-                        <p className="empty-message">Your cart is empty.</p>
+                        <p className="empty-message">{CART_CONSTANTS.EMPTY_CART}</p>
                     )}
                 </div>
                 </>
@@ -101,7 +98,7 @@ const CartContainer = ({ cartProducts, wishlistProducts,setCartProducts,setWishl
                     {wishlistProducts.length > 0 ? (
                         wishlistProducts.map((product) => <Item key={product.id} product={product} selectedTab={selectedTab} onUpdateCart={()=>{}} onUpdateWishlist={handleUpdateWishlist} />)
                     ) : (
-                        <p className="empty-message">Your wishlist is empty.</p>
+                        <p className="empty-message">{CART_CONSTANTS.EMPTY_WISHLIST}</p>
                     )}
                 </div>
             )}
@@ -110,10 +107,10 @@ const CartContainer = ({ cartProducts, wishlistProducts,setCartProducts,setWishl
             <div className="cart-footer">
                 <div className="total-price-section">
                     <div className="total-amount-Header">
-                        <p className="total-amount-heading">Total Amount</p>
+                        <p className="total-amount-heading">{CART_CONSTANTS.TOTAL_AMOUNT}</p>
                         <p className="total-amount-value">₹ {totalAmount}</p>
                     </div>
-                    <Button name={"PLACE ORDER"} className={"add-to-cart"} onClick={()=>navigate("/confirmOrder", { state: { cartProducts } })} />
+                    <Button name={CART_CONSTANTS.PLACE_ORDER} className={"add-to-cart"} onClick={()=>navigate("/confirmOrder", { state: { cartProducts } })} />
                 </div>
             </div>
             }

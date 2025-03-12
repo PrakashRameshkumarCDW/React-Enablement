@@ -1,6 +1,8 @@
 import ProductCard from "../../components/ProductCard/ProductCard";
+import { ORDER_CONFIRMATION_TEXT } from "../../constants/APP_CONSTANTS";
 import "./OrderConfirmation.css";
-const OrderConfirmation = ({confirmedProducts}:{
+
+interface confirmedProductsProp {
     confirmedProducts: {
         id: number;
         name: string;
@@ -11,13 +13,16 @@ const OrderConfirmation = ({confirmedProducts}:{
         description: string;
         quantity:number;
     }[];
-}) =>{
+}
+
+const OrderConfirmation = ({confirmedProducts}:confirmedProductsProp
+) =>{
 
     return(
         <>
             <div className="order-confirmation-container">
-                <div className="order-confirmation-title">Order Confirmation</div>
-                <div className="order-confirmation-subtle">Thank you for shopping with us. The items will be delivered within 7days</div>
+                <div className="order-confirmation-title">{ORDER_CONFIRMATION_TEXT.TITLE}</div>
+                <div className="order-confirmation-subtle">{ORDER_CONFIRMATION_TEXT.SUBTITLE}</div>
                 <div className="order-confirmed-products">
                 {confirmedProducts.map((order, index) => (
                     <ProductCard 

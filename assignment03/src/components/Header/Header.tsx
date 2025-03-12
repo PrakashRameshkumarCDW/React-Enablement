@@ -2,6 +2,7 @@ import { Link, useNavigate} from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
 import './Header.css';
+import { APP_NAME, NAV_LINKS } from "../../constants/APP_CONSTANTS";
 
 
 const Header = ({id}:{
@@ -10,12 +11,12 @@ const Header = ({id}:{
   const navigate = useNavigate();
   return (
     <header className="header">
-      <div className="logo"onClick={() => navigate("/")} >SITBACK</div>
+      <div className="logo"onClick={() => navigate("/")} >{APP_NAME}</div>
       <nav>
         <ul className="nav-links">
-          <li><Link to="/categories/couches">COUCHES</Link></li>
-          <li><Link to="/categories/chairs">CHAIRS</Link></li>
-          <li><Link to="/categories/dining">DINING</Link></li>
+        {NAV_LINKS.map((link) => (
+            <li><Link to={link.path}>{link.label}</Link></li>
+        ))}
         </ul>
         <div className={`selected-${id}`}></div>
       </nav>

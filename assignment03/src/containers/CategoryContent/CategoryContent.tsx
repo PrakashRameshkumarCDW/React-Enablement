@@ -6,22 +6,24 @@ import ProductCard from "../../components/ProductCard/ProductCard";
 import CartContainer from "../CartContainer/CartContainer";
 import { addToCart, getCart } from "../../services/maintainCart";
 import { addToWishlist, getWishlist } from "../../services/maintainWishlist";
+import { API_ENDPOINTS } from "../../constants/API_CONSTANTS";
+
+interface Product {
+    id: number;
+    name: string;
+    photo: string;
+    guarantee: number;
+    rating: number;
+    price: string;
+    description: string;
+    quantity: number;
+}
 
 const CategoryContent = ({ id, 
  }: {
     id?: string;
 }) => {
-    const [Categories, setCategories] = useState<
-        {
-            id: number;
-            name: string;
-            photo: string;
-            guarantee: number,
-            rating: number,
-            price: string,
-            description: string;
-            quantity:number;
-        }[]>([]);
+    const [Categories, setCategories] = useState<Product[]>([]);
     const [loading, setLoading] = useState(true);
 
     const [cartProducts, setCartProducts] = useState(getCart()); 
@@ -29,30 +31,12 @@ const CategoryContent = ({ id,
 
     const [selectedOption,setSelectedOption] = useState("");
 
-    const handleAddToCart = (product:{
-        id: number;
-        name: string;
-        photo: string;
-        guarantee: number,
-        rating: number,
-        price: string,
-        description: string;
-        quantity:number;
-    }) => {
+    const handleAddToCart = (product:Product) => {
         const updatedProduct = {...product,quantity: 1};
         addToCart(updatedProduct);
         setCartProducts([...getCart()]);
     };
-    const handleAddToWishList = (product:{
-        id: number;
-        name: string;
-        photo: string;
-        guarantee: number,
-        rating: number,
-        price: string,
-        description: string;
-        quantity:number;
-    }) => {
+    const handleAddToWishList = (product:Product) => {
         addToWishlist(product);
         setWishlists([...getWishlist()]);
     };
@@ -62,7 +46,7 @@ const CategoryContent = ({ id,
         const getCategories = async () => {
             setLoading(true);
             const data = await fetchUrl(
-                `https://jsonmockserver.vercel.app/api/shopping/furniture/products?category=${id}`
+                `${API_ENDPOINTS.PRODUCTS}?category=${id}`
             );
             const updatedData = data.map((item: any) => ({
                 ...item,

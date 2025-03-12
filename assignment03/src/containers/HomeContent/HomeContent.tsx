@@ -2,7 +2,9 @@ import Card from "../../components/Card/Card";
 import {useState, useEffect} from "react";
 import { fetchUrl } from "../../services/apiService";
 import loader from "../../assets/loader.gif";
+import { API_ENDPOINTS } from "../../constants/API_CONSTANTS";
 import './HomeContent.css'; 
+import { HOME_CONTENT_TEXT } from "../../constants/APP_CONSTANTS";
 
 const Content = () => {
     const [allCategories, setAllCategories] = useState<
@@ -19,9 +21,7 @@ const Content = () => {
     useEffect(() => {
         const getAllCategories = async () => {
             setLoading(true);
-            const data = await fetchUrl(
-                "https://jsonmockserver.vercel.app/api/shopping/furniture/categories"
-            );
+            const data = await fetchUrl(API_ENDPOINTS.CATEGORIES);
             setAllCategories(data);
             setLoading(false);
         };
@@ -30,8 +30,8 @@ const Content = () => {
     return (
         <>
             <div className="content"> 
-                <h1>Your Home, With Love</h1>
-                <h3>Come, Choose from millions of products</h3>
+                <h1>{HOME_CONTENT_TEXT.TITLE}</h1>
+                <h3>{HOME_CONTENT_TEXT.SUBTITLE}</h3>
                 {loading ? ( 
                     <div className="loader-container">
                     <img src={loader} alt="Loading..." className="loader" />
