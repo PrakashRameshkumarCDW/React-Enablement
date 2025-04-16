@@ -1,0 +1,22 @@
+.lottery-container {
+  background: linear-gradient(to right, #f5d76e, #b38e28);
+  padding: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .lottery-message {
+    color: #ffff;
+    font-size: 35px;
+  }
+  .lottery-instructions {
+    color: #ffff;
+    font-size: 25px;
+  }
+
+  .input-container {
+    .custom-input {
+      margin: 0 65px;
+    }
+  }
+}

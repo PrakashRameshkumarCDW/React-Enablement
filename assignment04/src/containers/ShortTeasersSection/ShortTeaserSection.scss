@@ -1,0 +1,65 @@
+.short-teaser-section-container {
+  background-color: rgb(21, 21, 21);
+  padding: 0px 100px;
+  padding-bottom: 100px;
+  color: #ffffff;
+  h1 {
+    margin-bottom: 20px;
+  }
+  .short-teaser-card-container {
+    display: flex;
+    justify-content: space-between;
+    width: 86%;
+
+    .teaser-card {
+      display: flex;
+      flex-direction: column;
+
+      .teaser-image {
+        width: 420px;
+        height: 230px;
+        position: relative;
+
+        .advertisement-container {
+          position: absolute;
+          top: 0;
+          z-index: 99999;
+          width: 420px;
+          height: 230px;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+
+        .teaser-video {
+          width: 420px;
+          height: 230px;
+        }
+
+        .play-icon {
+          position: absolute;
+          top: 40%;
+          left: 45%;
+          font-size: 50px;
+          cursor: pointer;
+        }
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .teaser-movie-name {
+        padding-top: 20px;
+        font-size: 20px;
+      }
+      .advertisement-text {
+        color: rgb(67, 106, 163);
+        padding-top: 20px;
+        height: 30px;
+      }
+    }
+  }
+}

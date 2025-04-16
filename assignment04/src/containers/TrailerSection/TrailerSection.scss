@@ -1,0 +1,53 @@
+.trailer-section-container {
+  background-color: rgb(21, 21, 21);
+  padding: 70px 100px;
+  h1 {
+    color: #ffffff;
+  }
+  p {
+    color: #ffffff;
+    font-size: 14.5px;
+  }
+
+  .sign-in a {
+    color: rgb(67, 106, 163);
+    cursor: pointer;
+    text-decoration: none;
+  }
+  .trailer-main-content {
+    display: flex;
+    padding: 20px 0;
+
+    .trailer-image {
+      width: 420px;
+      height: 200px;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    .trailer-description-container {
+      color: #ffffff;
+      width: 60%;
+      padding-left: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .watch-now {
+        width: 18%;
+      }
+
+      .trailer-description-title {
+        h1 {
+          font-size: 32px;
+        }
+      }
+      .trailer-description-content {
+        letter-spacing: 2px;
+        font-size: 18px;
+      }
+    }
+  }
+}

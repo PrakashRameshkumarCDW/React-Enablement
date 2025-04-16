@@ -1,0 +1,17 @@
+.main-content {
+  background-color: rgb(21, 21, 21);
+  width: 100%;
+  overflow: hidden;
+  padding: 50px 60px 80px 60px;
+  display: flex;
+
+  .left-content {
+    width: 50%;
+  }
+
+  .right-content {
+    width: 50%;
+    color: #ffffff;
+    padding: 54px 0 20px 100px;
+  }
+}

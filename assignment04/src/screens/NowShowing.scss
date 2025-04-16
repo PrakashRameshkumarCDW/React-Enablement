@@ -1,0 +1,44 @@
+.nowShowing-container {
+  background-color: rgb(21, 21, 21);
+  padding: 3rem 15rem;
+  .now-showing-text {
+    color: rgb(81, 130, 198);
+    font-size: 20px;
+    font-weight: 500;
+    padding-bottom: 30px;
+  }
+  .heading-name {
+    color: #ffffff;
+    font-size: 32px;
+    font-weight: 500;
+    padding-bottom: 20px;
+  }
+  .sintel-image-wrapper {
+    position: relative;
+    .sintel-image {
+      width: 100%;
+      height: 550px;
+
+      img,
+      .sintel-video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .play-icon {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        font-size: 50px;
+        cursor: pointer;
+      }
+    }
+  }
+  .sintel-description {
+    color: #ffffff;
+    font-size: 22px;
+    line-height: 30px;
+    letter-spacing: 2px;
+    padding: 20px 0 6.2rem 0;
+  }
+}

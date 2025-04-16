@@ -1,0 +1,13 @@
+.input-container {
+  .custom-input {
+    width: 300px;
+    padding: 10px;
+    border: none;
+    font-size: 16px;
+    outline: none;
+
+    &::placeholder {
+      color: #ccc;
+    }
+  }
+}
