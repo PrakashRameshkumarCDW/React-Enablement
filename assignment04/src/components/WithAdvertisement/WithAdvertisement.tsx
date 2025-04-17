@@ -38,7 +38,9 @@ const withAdvertisement = <P extends object>(
         let resumeCount = options.resumeCountdownStart;
 
         const countdown = setInterval(() => {
-          setAdText(`${options.adLabel} 00:0${count}`);
+          setAdText(
+            `${options.adLabel} 00:${count < 10 ? "0" + count : count}`
+          );
           count--;
           if (count < 0) {
             clearInterval(countdown);
@@ -46,10 +48,18 @@ const withAdvertisement = <P extends object>(
             setShowAdImage(
               Math.random() > 0.5 ? options.adImages[0] : options.adImages[1]
             );
-            setAdText(`${options.resumeLabel} 00:0${resumeCount}`);
+            setAdText(
+              `${options.resumeLabel} 00:${
+                resumeCount < 10 ? "0" + resumeCount : resumeCount
+              }`
+            );
 
             const resumeInterval = setInterval(() => {
-              setAdText(`${options.resumeLabel} 00:0${resumeCount}`);
+              setAdText(
+                `${options.resumeLabel} 00:${
+                  resumeCount < 10 ? "0" + resumeCount : resumeCount
+                }`
+              );
               resumeCount--;
               if (resumeCount < 0) {
                 clearInterval(resumeInterval);
