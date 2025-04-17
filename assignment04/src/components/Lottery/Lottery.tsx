@@ -42,9 +42,10 @@ const Lottery = () => {
 
             <Button
               name={BUTTON_LABEL}
-              className={"luck-check"}
+              className={"luck-check "}
               type="button"
               onClick={checkLuck}
+              disabled={mobileNumber.length !== 10}
             />
           </>
         )}
