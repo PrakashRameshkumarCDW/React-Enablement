@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export interface AdProps {
   adText: string;
@@ -27,23 +27,32 @@ const withAdvertisement = <P extends object>(
     const [showAdImage, setShowAdImage] = useState<string>("");
     const [adText, setAdText] = useState<string>("");
 
+    const timeoutRef = useRef<number | null>(null);
+    const countdownRef = useRef<number | null>(null);
+    const resumeRef = useRef<number | null>(null);
+
     useEffect(() => {
       if (!props.triggerKey) return;
+
+      if (timeoutRef.current !== null) clearTimeout(timeoutRef.current);
+      if (countdownRef.current !== null) clearInterval(countdownRef.current);
+      if (resumeRef.current !== null) clearInterval(resumeRef.current);
 
       setAdText(options.initialAdText);
       setShowAdImage("");
 
-      const timer = setTimeout(() => {
+      timeoutRef.current = window.setTimeout(() => {
         let count = options.countdownStart;
         let resumeCount = options.resumeCountdownStart;
 
-        const countdown = setInterval(() => {
+        countdownRef.current = window.setInterval(() => {
           setAdText(
             `${options.adLabel} 00:${count < 10 ? "0" + count : count}`
           );
           count--;
           if (count < 0) {
-            clearInterval(countdown);
+            if (countdownRef.current !== null)
+              clearInterval(countdownRef.current);
 
             setShowAdImage(
               Math.random() > 0.5 ? options.adImages[0] : options.adImages[1]
@@ -54,7 +63,7 @@ const withAdvertisement = <P extends object>(
               }`
             );
 
-            const resumeInterval = setInterval(() => {
+            resumeRef.current = window.setInterval(() => {
               setAdText(
                 `${options.resumeLabel} 00:${
                   resumeCount < 10 ? "0" + resumeCount : resumeCount
@@ -62,7 +71,8 @@ const withAdvertisement = <P extends object>(
               );
               resumeCount--;
               if (resumeCount < 0) {
-                clearInterval(resumeInterval);
+                if (resumeRef.current !== null)
+                  clearInterval(resumeRef.current);
                 setAdText("");
                 setShowAdImage("");
               }
@@ -71,7 +81,11 @@ const withAdvertisement = <P extends object>(
         }, 1000);
       }, 50);
 
-      return () => clearTimeout(timer);
+      return () => {
+        if (timeoutRef.current !== null) clearTimeout(timeoutRef.current);
+        if (countdownRef.current !== null) clearInterval(countdownRef.current);
+        if (resumeRef.current !== null) clearInterval(resumeRef.current);
+      };
     }, [props.triggerKey]);
 
     return (
