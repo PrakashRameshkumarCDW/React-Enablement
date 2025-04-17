@@ -46,7 +46,7 @@ export default function Header() {
             </button>
           </>
         ) : (
-          <Link to={ROUTES.LOGIN}>{ROUTES.LOGIN}</Link>
+          <Link to={ROUTES.LOGIN}>{ROUTES.LOGIN_HEADER}</Link>
         )}
       </div>
     </header>
