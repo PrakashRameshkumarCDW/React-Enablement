@@ -23,7 +23,7 @@ const AllMovies = () => {
       likes: number;
     }[]
   >([]);
-  const [selectedMovieId, setSelectedMovieId] = useState<number>(0);
+  const [selectedMovieId, setSelectedMovieId] = useState<number>(1);
 
   useEffect(() => {
     const fetchMovies = async () => {
@@ -45,10 +45,7 @@ const AllMovies = () => {
     );
   };
 
-  const selectedMovie =
-    selectedMovieId !== null
-      ? movies.find((m) => m.id === selectedMovieId)
-      : undefined;
+  const selectedMovie = movies.find((m) => m.id === selectedMovieId);
 
   return (
     <div className="main-content">
