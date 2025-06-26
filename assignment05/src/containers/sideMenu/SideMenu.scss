@@ -1,0 +1,103 @@
+@use "../../variables" as *;
+
+.sidebar-container {
+  padding: 50px;
+  width: 16%;
+
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  .sidebar-container-light {
+    background-color: $primary-light;
+  }
+  .sidebar-container-dark {
+    background-color: $primary-dark;
+  }
+
+  .logo-light,
+  .logo-dark {
+    font-family: var(--font-Roboto);
+    font-size: 2rem;
+    font-weight: 400;
+    margin-left: 1rem;
+    color: $logo-color-light;
+
+    span {
+      font-weight: 400;
+      color: $text-color-light;
+    }
+  }
+  .logo-dark {
+    color: $text-color-dark;
+    span {
+      color: $text-color-dark;
+    }
+  }
+
+  .filter-section {
+    margin-top: 2rem;
+
+    h3 {
+      font-family: var(--font-IBM);
+      font-weight: 400;
+      margin-bottom: 1rem;
+      font-size: 20px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+
+      li {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+  .filter-section-light {
+    color: $text-color-light;
+  }
+
+  .filter-section-dark {
+    color: $text-color-dark;
+  }
+
+  .menu-section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin: 2rem 0;
+
+    button,
+    .light-mode-btn button {
+      font-family: var(--font-IBM);
+      font-size: 1rem;
+      font-weight: 400;
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: $text-color-light;
+      text-align: left;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    button,
+    .dark-mode-btn button {
+      font-family: var(--font-IBM);
+      font-size: 1rem;
+      font-weight: 400;
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: $text-color-dark;
+      text-align: left;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

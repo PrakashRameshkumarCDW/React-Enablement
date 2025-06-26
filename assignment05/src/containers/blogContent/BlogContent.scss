@@ -1,0 +1,20 @@
+.blogContent-wrapper {
+  width: 50%;
+  padding: 3rem 3.5rem;
+  height: 100vh;
+  overflow: scroll;
+
+  .blogContent-image {
+    width: 100%;
+    height: 440px;
+  }
+  .blog-content-blog-title {
+    font-size: 35px;
+    font-weight: 500;
+    font-family: var(--font-Roboto);
+    margin: 1.75rem 0 1.25rem;
+    line-height: 30px;
+    padding: 0;
+    border-radius: 0;
+  }
+}

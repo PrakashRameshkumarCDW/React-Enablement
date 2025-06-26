@@ -1,0 +1,62 @@
+@use "../../variables" as *;
+
+input {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  border-radius: 50px;
+  border: none;
+  outline: none;
+}
+
+.search {
+  font-size: 15px;
+
+  &::placeholder {
+    font-size: 14px;
+    color: #95969a;
+  }
+}
+.search-light {
+  background-color: $input-wrapper-light;
+}
+.search-dark {
+  background-color: $input-wrapper-dark;
+  color: #ffffff;
+}
+
+.blog-title {
+  font-size: 35px;
+  font-weight: 500;
+  font-family: var(--font-Roboto);
+  margin: 1.75rem 0 1.25rem;
+  line-height: 30px;
+  padding: 0;
+  border-radius: 0;
+}
+.blog-title-light {
+  background-color: $primary-light;
+  color: #000000;
+}
+.blog-title-dark {
+  background-color: $primary-dark;
+  color: #ffffff;
+}
+
+.new-blog-title {
+  border-radius: 0;
+  padding: 0.5rem 0;
+  font-size: 27px;
+  font-family: var(--font-Roboto);
+
+  &::placeholder {
+    color: #95969a;
+  }
+}
+.new-blog-title-light {
+  background-color: $primary-light;
+  color: #000000;
+}
+.new-blog-title-dark {
+  background-color: $primary-dark;
+  color: #ffffff;
+}

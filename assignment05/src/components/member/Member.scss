@@ -1,0 +1,30 @@
+@use "../../_variables.scss" as *;
+
+.member-wrapper {
+  .image-wrapper {
+    height: 150px;
+  }
+
+  .name {
+    margin: 8px 0 5px;
+    font-size: 15px;
+    font-weight: 400;
+  }
+  .name-light {
+    color: $logo-color-light;
+  }
+  .name-dark {
+    color: $logo-color-dark;
+  }
+
+  .location {
+    font-size: 13px;
+    margin-bottom: 12px;
+  }
+  .location-light {
+    color: $member-place-light;
+  }
+  .location-dark {
+    color: $member-place-dark;
+  }
+}

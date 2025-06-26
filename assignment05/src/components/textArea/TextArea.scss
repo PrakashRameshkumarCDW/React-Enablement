@@ -1,0 +1,40 @@
+@use "../../variables" as *;
+
+textarea {
+  resize: none;
+  min-height: 50px;
+  height: 35vh;
+  border: none;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 30px;
+  width: 100%;
+  word-wrap: break-word;
+  outline: none;
+}
+.blog-content-light {
+  background-color: $primary-light;
+  color: #000000;
+}
+.blog-content-dark {
+  background-color: $primary-dark;
+  color: #ffffff;
+}
+.new-blog-details {
+  margin-top: 2rem;
+  font-family: var(--font-Roboto);
+  font-size: 16px;
+  height: 63vh;
+
+  &::placeholder {
+    color: #cacaca;
+  }
+}
+.new-blog-details-light {
+  background-color: $primary-light;
+  color: #000000;
+}
+.new-blog-details-dark {
+  background-color: $primary-dark;
+  color: #ffffff;
+}

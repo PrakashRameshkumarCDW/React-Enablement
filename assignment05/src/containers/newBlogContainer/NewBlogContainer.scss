@@ -1,0 +1,41 @@
+@use "../../variables" as *;
+
+.new-blog-main-wrapper {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+
+  .left-section {
+    background-color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    width: 65%;
+    height: 100%;
+  }
+
+  .right-section {
+    width: 35%;
+    height: 100%;
+
+    .form-wrapper {
+      padding: 5rem 3.65rem;
+
+      .new-blog-title {
+        font-size: 20px;
+        font-weight: 500;
+        margin-bottom: 2rem;
+        text-transform: capitalize;
+        font-family: "Roboto Slab", serif;
+      }
+    }
+  }
+  .right-section-light {
+    background-color: $primary-light;
+  }
+  .right-section-dark {
+    background-color: $primary-dark;
+  }
+}

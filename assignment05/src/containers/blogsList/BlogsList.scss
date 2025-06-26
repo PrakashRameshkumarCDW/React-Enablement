@@ -1,0 +1,30 @@
+@use "../../variables" as *;
+
+.blogsList-wrapper {
+  padding: 2.5rem 1.25rem;
+  width: 34%;
+  height: 100vh;
+  overflow: hidden;
+
+  .blogsList-content {
+    height: 95vh;
+    padding: 0 0 1rem;
+    overflow-y: scroll;
+
+    .noblogs {
+      font-size: 20px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .blogsList {
+      list-style: none;
+    }
+  }
+}
+.blogsList-wrapper-light {
+  background-color: $secondary-light;
+}
+.blogsList-wrapper-dark {
+  background-color: $secondary-dark;
+}

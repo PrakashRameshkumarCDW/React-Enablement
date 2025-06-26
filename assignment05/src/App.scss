@@ -1,0 +1,8 @@
+@use "./variables" as *;
+
+.app-wrapper-light {
+  background-color: $primary-light;
+}
+.app-wrapper-dark {
+  background-color: $primary-dark;
+}

@@ -1,0 +1,61 @@
+@use "../../variables" as *;
+
+.blog-wrapper {
+  padding: 2rem;
+  border-radius: 10px;
+  margin: 0.5rem 1rem 1rem;
+
+  &.selected-light {
+    background-color: $selected-blog-wrapper-light;
+  }
+  &.selected-dark {
+    background-color: $selected-blog-wrapper-dark;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  .blogTitle {
+    font-size: 18px;
+    font-weight: 500;
+    font-family: "Roboto Slab", serif;
+
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 1;
+  }
+
+  .blog-type {
+    margin: 10px 0 8px;
+    color: $logo-color-light;
+    text-transform: uppercase;
+    font-size: 13px;
+  }
+
+  .blog-details {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: 300;
+    line-height: 25px;
+    -webkit-line-clamp: 3;
+  }
+  .blogTitle-light,
+  .blog-details-light {
+    color: #000000;
+  }
+  .blogTitle-dark,
+  .blog-details-dark {
+    color: #ffffff;
+  }
+}
+.blog-wrapper-light {
+  background-color: $blog-wrapper-light;
+}
+.blog-wrapper-dark {
+  background-color: $blog-wrapper-dark;
+}
